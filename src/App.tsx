@@ -8,17 +8,27 @@ import type { User } from './UserCard' // Importing the interface
 const user: User = {
   name:"Alice",
   age:30,
-  email:"alice@gmail.com"
+  email:"alice@gmail.com",
+  role:"ADMIN"
 }
 
-function App() {
+// Create a mock profile
 
+const profile = {
+ bio: "A passionate developer and tech enthusiast.",
+ website: "https://alice.dev"
+};
+
+
+function App() {
 
   return (
     <>
      <h1>User Information</h1>
      {/* Bring out the component and pass the user value that is created */}
-     <UserCard user={user}/> 
+     {/* THe user on the right side refers to variable created, left - props */}
+     
+     <UserCard user={user} profile={profile}/> 
     </>
   )
 }
